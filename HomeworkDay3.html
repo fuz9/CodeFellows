@@ -1,0 +1,52 @@
+<script>
+	function Car(exterior,interior) {
+		this.color = exterior;
+		this.interior = interior;
+		this.intNum;
+		this.extNum;
+		
+		//calculate exterior
+		this.calcExterior = function () {
+			var colors = ["Titanium Silver", "Cosmos Black", "Estoril Blue", "Imola Red","Arctic Silver","Steel Grey","Black Saphire","Alpine White","Boston Green","Dakar Yellow","Oxford Green","Laguna Seca Blue","Evergreen","Phoenix Yellow","Bright Red","Special Order"];
+			var colorNumbers = ["544","516","472","422","276","121","120","103","73","51","46","41","41","21","1","10"];
+			
+			for(var i = 0; i < colors.length; i++) {
+				if (this.color == colors[i]){
+					this.extNum = colorNumbers[i];
+					}
+				else {
+			}
+		}
+		
+		//calculate interior	
+		this.calcInterior = function () {
+			var interiors = ["Black Nappa","Dark Grey","Estoril Blue","Imola Red","Dark Beige Oregon","Kyalami Orange","Evergreen","Laguna Seca","Kiwi"];
+			var interiorNumbers = ["1273","450","365","361","314","36","32","24","2"];
+			
+			for(var j = 0; j < interiors.length; j++) {
+				if (this.interior == interiors[j]){
+					this.intNum = interiorNumbers[j];
+					}
+				else {
+			}
+		}
+	}
+}
+}
+//cars
+myCar = new Car("Imola Red","Imola Red");
+dreamCar = new Car("Laguna Seca Blue","Dark Beige Oregon")
+
+//run calculation
+myCar.calcExterior();
+myCar.calcInterior();
+dreamCar.calcExterior();
+dreamCar.calcInterior();
+
+
+//	Return result
+	alert("Your current car's exterior is one of " + myCar.extNum + " and your interior is one of " + myCar.intNum);
+	alert("Your dream car's exterior is one of " + dreamCar.extNum + " and the interior is one of " + dreamCar.intNum);
+
+
+</script>
