@@ -1,0 +1,42 @@
+<script>
+//	Gather prompts from user
+var colorPrompt = prompt("What color is your 1999-2002 BMW MCcoupe's exterior?");
+var interiorPrompt = prompt("What color is your Coupe's interior");
+
+
+//	Calculate the rarity of the paint
+function calcExterior(colorPrompt){
+	var colors = ["Titanium Silver", "Cosmos Black", "Estoril Blue", "Imola Red","Arctic Silver","Steel Grey","Black Saphire","Alpine White","Boston Green","Dakar Yellow","Oxford Green","Laguna Seca Blue","Evergreen","Phoenix Yellow","Bright Red","Special Order"];
+	var colorNumbers = ["544","516","472","422","276","121","120","103","73","51","46","41","41","21","1","10"];
+	for(var i = 0; i < colors.length; i++) {
+		if (colorPrompt == colors[i]){
+			return colorNumbers[i];
+		}
+		else {
+		}
+	}
+}
+
+// Calculate the rarity of the interior
+function calcInterior(interiorPrompt){
+	var interiors = ["Black Nappa","Dark Grey","Estoril Blue","Imola Red","Dark Beige Oregon","Kyalami Orange","Evergreen","Laguna Seca","Kiwi"]
+	var interiorNumbers = ["1273","450","365","361","314","36","32","24","2"]
+	for(var i = 0; i < interiors.length; i++) {
+		if (interiorPrompt == interiors[i]){
+			return interiorNumbers[i];
+			
+		}
+		else {
+			
+		}
+	}
+}
+
+// Execute calculation
+var exteriorResult = calcExterior(colorPrompt);
+var interiorResult = calcInterior(interiorPrompt);
+
+//	Return result
+alert("Your exterior is one of " + exteriorResult + " and your interior is one of " + interiorResult);
+
+</script>
